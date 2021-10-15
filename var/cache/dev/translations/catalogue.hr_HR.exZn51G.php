@@ -22,6 +22,12 @@ $catalogue = new MessageCatalogue('hr_HR', array (
 ));
 
 $catalogueHr = new MessageCatalogue('hr', array (
+  'KnpPaginatorBundle' => 
+  array (
+    'label_previous' => 'Prethodna',
+    'label_next' => 'Sljedeća',
+    'filter_searchword' => 'Tražena riječ...',
+  ),
   'validators' => 
   array (
     'This form should not contain extra fields.' => 'Ovaj obrazac ne smije sadržavati dodatna polja.',

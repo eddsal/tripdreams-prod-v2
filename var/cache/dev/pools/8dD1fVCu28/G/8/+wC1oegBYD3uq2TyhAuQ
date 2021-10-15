@@ -1,0 +1,24 @@
+<?php //%255BApp%255CController%255CAgence%255CAgenceController%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['SlopeIt\\BreadcrumbBundle\\Annotation\\Breadcrumb'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('SlopeIt\\BreadcrumbBundle\\Annotation\\Breadcrumb')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'items' => [
+                [
+                    [
+                        'label' => 'Voyages',
+                        'route' => 'agence_index',
+                    ],
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+    ],
+    []
+); }];

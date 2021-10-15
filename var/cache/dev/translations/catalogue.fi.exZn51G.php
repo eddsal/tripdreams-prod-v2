@@ -3,6 +3,12 @@
 use Symfony\Component\Translation\MessageCatalogue;
 
 $catalogue = new MessageCatalogue('fi', array (
+  'KnpPaginatorBundle' => 
+  array (
+    'label_previous' => 'Edellinen',
+    'label_next' => 'Seuraava',
+    'filter_searchword' => 'Etsi...',
+  ),
   'time' => 
   array (
     'diff.ago.year' => '1 vuosi sitten|%count% vuotta sitten',
