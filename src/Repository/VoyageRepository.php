@@ -103,7 +103,7 @@ class VoyageRepository extends ServiceEntityRepository
         ->setParameter('status', 'avaible')
         ->setParameter('pays', $pays);
 
-        $result = $qb->getQuery()->setMaxResults(1)->getSingleResult();
+        $result = $qb->getQuery()->setMaxResults(1)->getOneOrNullResult();
 
         return $result;
     }
