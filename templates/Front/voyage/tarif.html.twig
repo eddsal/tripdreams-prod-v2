@@ -1,0 +1,29 @@
+
+<table class="table table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+  <thead>
+    <tr>
+      <th>Prix</th>
+      <th>Date de départ</th>
+      <th>Date de retour</th>
+      <th>Capacité</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>Prix</th>
+      <th>Date de départ</th>
+      <th>Date de retour</th>
+      <th>Capacité</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    {% for tarif in tarifs %}
+      <tr>
+        <td>{{tarif.prix}} €</td>
+        <td>{{tarif.depart|date("d/m/Y")}}</td>
+        <td>{{tarif.retour|date("d/m/Y")}}</td>
+        <td>{{tarif.capacite}}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

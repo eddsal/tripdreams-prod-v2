@@ -1,0 +1,54 @@
+{% extends 'base_front.html.twig' %}
+
+{% block title %}Historique d'achats{% endblock %}
+
+{% block body %}
+
+<div class="container">
+  <div class="section">
+    {% if purchases is not empty %}
+        <div class="card is-shady column is-offset-one-quarter">
+            <div class="card-header">
+                <p class="title is-6">Votre historique d'achats</p>
+            </div>
+            <div class="v-card-content mt-5 mb-5">
+                <table class="table table is-striped is-narrow is-hoverable">
+                    <thead>
+                        <tr>
+                            <th>Aperçu</th>
+                            <th>Dénomination</th>
+                            {# <th>Prix</th> #}
+                            <th>Opérations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for purchase in purchases %}
+                        <tr>
+                            <td>
+                                <a class="image is-16by9" href="{{ path('voyage_show', {'id': purchase.id}) }}">
+                                    <img src="{{ vich_uploader_asset(purchase) }}" alt="{{ purchase.name }}" />
+                                </a>
+                            </td>
+                            <td>{{ purchase.name }}</td>
+                            {# <td>{{ purchase.tarif|first.prix }} €</td> #}
+                            <td>
+                                <a href="{{ path('voyage_show', {'id': purchase.id}) }}"><button class="button is-small is-success"><i class="bi bi-eye"></i></button></a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% else %}
+        <div class="box">
+            <p class="has-text-centered has-text-danger-dark">
+                Votre historique d'achats est vide
+            </p>
+        </div>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}
+

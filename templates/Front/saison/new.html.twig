@@ -1,0 +1,11 @@
+{% extends 'base_front.html.twig' %}
+
+{% block title %}Nouvelle saison{% endblock %}
+
+{% block body %}
+    <h1>Créer une nouvelle saison</h1>
+
+    {{ include('Front/saison/_form.html.twig') }}
+
+    <a href="{{ path('saison_index') }}">Retour à mes saisons</a>
+{% endblock %}

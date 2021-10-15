@@ -1,0 +1,21 @@
+<section>
+    <div class="container  d-flex flex-column justify-content-center align-items-center mt-5  mb-5">
+        <div>
+            <h2 class="is-size-4 has-text-white">Les meilleurs voyages</h2>
+        </div>
+
+            {# {{ dump(voyages) }} #}
+        <main class="page-content">
+            {% for voyage in voyages %}
+                <div class="card-voyage" style="background: no-repeat url({{ vich_uploader_asset(voyage) }});background-size: cover;">
+                    <div class="content">
+                        <h2 class="has-text-white">{{ voyage.name }}</h2>
+                        <p class="copy">{{ voyage.description|striptags|length > 80 ? voyage.description|striptags|slice(0, 80) ~ '...' : voyage.description|striptags }}</p>
+                        <button class="button is-rounded"><a href="{{ path('voyage_show', {'id': voyage.id}) }}" >Réservez</a></button>
+                    </div>
+                </div>
+            {% endfor %}
+        </main>
+
+    </div>
+</section>

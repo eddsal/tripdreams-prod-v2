@@ -1,0 +1,19 @@
+{{ form_start(form) }}
+<div class="card">
+    <div class="card-header is-centered">
+        <p class="card-header-title is-centered">
+            Ajouter un commentaire
+        </p>
+    </div>
+    <div class="card-content">
+        {{ form_widget(form) }}
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">
+            <button class="button is-success">
+                {{ button_label|default('Publier') }}
+            </button>
+        </p>
+    </footer>
+</div>
+{{ form_end(form) }}

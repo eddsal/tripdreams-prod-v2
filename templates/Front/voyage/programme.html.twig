@@ -1,0 +1,25 @@
+<table class="table table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+    <thead>
+        <tr>
+            <th><abbr title="Jour #">Jour</abbr></th>
+            {# <th>Voyage</th> #}
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <th><abbr title="Jour #">Jour</abbr></th>
+            {# <th>Voyage</th> #}
+            <th>Description</th>
+        </tr>
+    </tfoot>
+    <tbody>
+        {% for programme in programme %}
+        <tr>
+            <td>{{programme.jour}}</td>
+            {# <td><a href="{{ path('voyage_show', {'id': programme.voyage.id}) }}" >{{programme.voyage.name}}</a></td> #}
+            <td>{{programme.description}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

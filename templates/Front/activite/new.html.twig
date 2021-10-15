@@ -1,0 +1,11 @@
+{% extends 'base_front.html.twig' %}
+
+{% block title %}Nouvelle activité{% endblock %}
+
+{% block body %}
+    <h1>Créer une nouvelle activité</h1>
+
+    {{ include('Front/activite/_form.html.twig') }}
+
+    <a href="{{ path('activite_index') }}">Retour à mes activités</a>
+{% endblock %}

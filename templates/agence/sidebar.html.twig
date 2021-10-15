@@ -1,0 +1,18 @@
+<aside class="menu is-hidden-mobile">
+    <p class="menu-label">
+        Géstion de voyages
+    </p>
+    <ul class="menu-list">
+        <li>
+            <a class="" href="{{ path('agence_voyage_show', {'id': app.user.id}) }}">
+                <i class=""></i>Mes voyages
+            </a>
+        </li>
+        <li>
+            <a href="{{path('voyage_new')}}">
+                <i class=""></i>Création voyage 
+                <span class="badge badge-primary">NOUVEAU</span>
+            </a>
+        </li>
+    </ul>
+</aside>

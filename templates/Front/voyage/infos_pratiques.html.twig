@@ -1,0 +1,32 @@
+<table class="table table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+    <thead>
+        <tr>
+            <th>Date de départ</th>
+            <th>Date de retour</th>
+            <th>Durée</th>
+            <th>Hébergement</th>
+            <th>Repas</th>
+            <th>Info COVID-19</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <th>Date de départ</th>
+            <th>Date de retour</th>
+            <th>Durée</th>
+            <th>Hébergement</th>
+            <th>Repas</th>
+            <th>Info COVID-19</th>
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+            <td>{{infosPratiques.getDepart()|date("d/m/Y")}}</td>
+            <td>{{infosPratiques.getRetour()|date("d/m/Y")}}</td>
+            <td>{{infosPratiques.getDuree()}} jours</td>
+            <td>{{infosPratiques.getHebergement()}}</td>
+            <td>{{infosPratiques.getRepas()}}</td>
+            <td>{{infosPratiques.getCovid19()}}</td>
+        </tr>
+    </tbody>
+</table>
